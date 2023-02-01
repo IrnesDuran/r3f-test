@@ -2,21 +2,30 @@ import React, { Suspense } from 'react'
 import {
   OrbitControls,
   PerspectiveCamera,
-  Environment
+  Environment,
+  Float
 } from '@react-three/drei'
 import FloatingIsland from '../Geometries/FloatingIsland'
 import Rocks from '../Geometries/Rocks'
 import Portal from '../Geometries/Portal'
 import FloatingRocks from '../Geometries/FloatingRocks'
+import Trees from '../Geometries/Tree'
+import Words from '../Geometries/Words'
+import Grass from '../Geometries/Grass'
 
 const SceneContainer = () => {
   return (
     <Suspense fallback={null}>
       <Environment background={'only'} files={'../../images/bg.hdr'} />
       <Environment background={false} files={'../../images/envmap.hdr'} />
-      <FloatingIsland />
-      <Rocks />
-      <Portal />
+      <Float speed={1} rotationIntensity={0.35} floatIntensity={0.5}>
+        <FloatingIsland />
+        <Rocks />
+        <Portal />
+        <Trees />
+        <Words />
+        <Grass />
+      </Float>
       <FloatingRocks />
       <PerspectiveCamera
         makeDefault

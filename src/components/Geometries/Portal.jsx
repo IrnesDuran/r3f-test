@@ -4,14 +4,8 @@ import { DoubleSide } from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 const Portal = () => {
-  const portal = useLoader(
-    GLTFLoader,
-    process.env.PUBLIC_URL + 'models/portal.glb'
-  )
-  const mask = useLoader(
-    GLTFLoader,
-    process.env.PUBLIC_URL + 'models/portal_mask.glb'
-  )
+  const portal = useLoader(GLTFLoader, 'models/portal.glb')
+  const mask = useLoader(GLTFLoader, 'models/portal_mask.glb')
 
   useEffect(() => {
     if (!portal) return
