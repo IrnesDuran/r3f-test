@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.videoOverlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: scroll;
+}
+
+.videoOverlay video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  filter: brightness(2);
+
+  /* pointer-events: auto; */
+}
