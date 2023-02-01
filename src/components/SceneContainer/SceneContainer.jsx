@@ -92,7 +92,12 @@ const SceneContainer = () => {
         />
       </EffectComposer>
 
-      <OrbitControls maxPolarAngle={Math.PI * 0.5} target={[1, 4, 0]} />
+      <OrbitControls
+        maxPolarAngle={Math.PI * 0.5}
+        target={[1, 4, 0]}
+        maxDistance={30}
+        minDistance={10}
+      />
     </Suspense>
   )
 }

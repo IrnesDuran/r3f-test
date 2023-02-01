@@ -3,5 +3,31 @@ body,
 #root {
   height: 100%;
   margin: 0;
-  background: #000000;
+  /* background: #000000; */
+}
+
+.container {
+  height: 80vh;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.videoOverlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: scroll;
+}
+
+.videoOverlay video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  filter: brightness(2);
+
+  /* pointer-events: auto; */
 }
