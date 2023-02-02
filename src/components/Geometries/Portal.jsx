@@ -14,13 +14,18 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import FillQuad from './FillQuad'
 
 const Portal = () => {
-  const portal = useLoader(GLTFLoader, 'models/portal.glb')
-  const mask = useLoader(GLTFLoader, 'models/portal_mask.glb')
+  const portal = useLoader(
+    GLTFLoader,
+    process.env.PUBLIC_URL + 'models/portal.glb'
+  )
+  const mask = useLoader(
+    GLTFLoader,
+    process.env.PUBLIC_URL + 'models/portal_mask.glb'
+  )
 
   const scene = new Scene()
   scene.background = new TextureLoader().load(
-    // thanks to https://www.creativeshrimp.com/midjourney-text-to-images.html
-    '/images/galaxy.jpg',
+    process.env.PUBLIC_URL + 'images/galaxy.jpg',
     (texture) => {
       texture.encoding = LinearEncoding
       texture.mapping = EquirectangularReflectionMapping

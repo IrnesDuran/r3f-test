@@ -2,6 +2,7 @@
   "name": "react-three-fiber-boilerplate",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://irnes-playground.netlify.app/",
   "keywords": [],
   "main": "src/index.jsx",
   "dependencies": {
