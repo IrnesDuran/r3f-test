@@ -5,13 +5,13 @@ import {
   Environment,
   Float
 } from '@react-three/drei'
-import FloatingIsland from '../Geometries/FloatingIsland'
-import Rocks from '../Geometries/Rocks'
-import Portal from '../Geometries/Portal'
-import FloatingRocks from '../Geometries/FloatingRocks'
-import Trees from '../Geometries/Tree'
-import Words from '../Geometries/Words'
-import Grass from '../Geometries/Grass'
+import FloatingIsland from '../SceneContainer/Geometries/FloatingIsland'
+import Rocks from '../SceneContainer/Geometries/Rocks'
+import Portal from '../SceneContainer/Geometries/Portal'
+import FloatingRocks from '../SceneContainer/Geometries/FloatingRocks'
+import Trees from '../SceneContainer/Geometries/Tree'
+import Words from '../SceneContainer/Geometries/Words'
+import Grass from '../SceneContainer/Geometries/Grass'
 import {
   BrightnessContrast,
   ChromaticAberration,
@@ -21,7 +21,7 @@ import {
   HueSaturation
 } from '@react-three/postprocessing'
 import { Color, CylinderGeometry, Mesh, MeshBasicMaterial } from 'three'
-import SceneParticles from '../Geometries/SceneParticles'
+import SceneParticles from '../SceneContainer/Geometries/SceneParticles'
 
 let lightColor = new Color(1, 0.2, 0.1)
 let mesh = new Mesh(
